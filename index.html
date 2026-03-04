@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Sivangsan SIVARASAN</title>
+    <style>
+        /* Styles de base */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f0f2f5;
+            line-height: 1.6;
+        }
+        
+        /* En-tête (Hero Section) */
+        header {
+            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+            color: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5rem;
+            letter-spacing: 1px;
+        }
+        header p {
+            font-size: 1.5rem;
+            color: #1abc9c;
+            margin-top: 10px;
+        }
+        .badge-stage {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 20px 0;
+            font-size: 1.1rem;
+        }
+        .btn-cv {
+            display: inline-block;
+            background-color: #1abc9c;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.2s, background 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-cv:hover {
+            background-color: #16a085;
+            transform: translateY(-2px);
+        }
+
+        /* Menu de navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #fff;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav a {
+            color: #2c3e50;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+        /* Conteneur principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 3rem 0;
+        }
+        section {
+            background: #fff;
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 4px solid #1abc9c;
+            padding-bottom: 10px;
+            margin-top: 0;
+            display: inline-block;
+        }
+
+        /* Grille des projets */
+        .grid-projets {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        /* Style pour l'emplacement de tes futures photos */
+        .project-img {
+            width: 100%;
+            height: 200px;
+            background-color: #e0e6ed; /* Couleur de fond en attendant la photo */
+            object-fit: cover;
+        }
+        .project-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .project-content h3 {
+            margin-top: 0;
+            color: #34495e;
+        }
+
+        /* Compétences (Badges) */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .skill-badge {
+            background: #edf2f7;
+            color: #2c3e50;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            border-left: 4px solid #1abc9c;
+        }
+        .skill-badge.soft {
+            border-left-color: #e74c3c;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1a252f;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Sivangsan SIVARASAN</h1>
+        <p>Étudiant en 2ème année de BUT GEII</p>
+        <div class="badge-stage">Recherche de Stage : Technicien Datacenter (10 à 12 sem.)</div>
+        <br>
+        <a href="cv-sivangsan.pdf" target="_blank" class="btn-cv">📄 Télécharger mon CV</a>
+    </header>
+
+    <nav>
+        <a href="#projets">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#experiences">Expériences</a>
+    </nav>
+
+    <div class="container">
+        
+        <section id="projets">
+            <h2>Mes Projets Techniques</h2>
+            <div class="grid-projets">
+                
+                <div class="project-card">
+                    <img src="photo-robot.jpg" alt="Photo du robot Arduino" class="project-img">
+                    <div class="project-content">
+                        <h3>🤖 Projet SAE Robot (Arduino)</h3>
+                        <p>Montage d'un robot 2 roues motrices (Hosyond). Développement d'un mode de navigation autonome pour éviter les obstacles (ultrasons) et d'un mode télécommandé (infrarouge).</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="photo-datacenter.jpg" alt="TP Datacenter" class="project-img">
+                    <div class="project-content">
+                        <h3>🖥️ Projets Datacenter</h3>
+                        <p>Analyse de systèmes Énergie et Froid. Lecture de plans, réalisation de mesures électriques et mise en place d'un câblage structuré.</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="photo-velo.jpg" alt="Projet Vélo Hacheur" class="project-img">
+                    <div class="project-content">
+                        <h3>⚡ Projet Vélo (Élec. Puissance)</h3>
+                        <p>Réalisation d'un hacheur pour la commande d'un moteur. Compétences mises en œuvre : soudure de composants, câblage et tests de fonctionnement sur banc d'essai.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="competences">
+            <h2>Mes Compétences (Hard & Soft Skills)</h2>
+            
+            <h3 style="margin-top: 30px; color: #1abc9c;">💻 Hard Skills (Techniques)</h3>
+            <div class="skills-container">
+                <span class="skill-badge">Câblage & Soudure</span>
+                <span class="skill-badge">Robotique & Systèmes embarqués</span>
+                <span class="skill-badge">Arduino (C/C++)</span>
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">Automatisme (Ladder)</span>
+                <span class="skill-badge">LabVIEW</span>
+                <span class="skill-badge">CAO/DAO & QElectroTech</span>
+                <span class="skill-badge">PSIM & Quartus</span>
+            </div>
+
+            <h3 style="margin-top: 30px; color: #e74c3c;">🤝 Soft Skills (Transversales)</h3>
+            <div class="skills-container">
+                <span class="skill-badge soft">Travail en équipe & Communication</span>
+                <span class="skill-badge soft">Gestion de projet (Gantt)</span>
+                <span class="skill-badge soft">Problem-solving (Résolution de bugs)</span>
+                <span class="skill-badge soft">Adaptabilité & Persévérance</span>
+            </div>
+        </section>
+
+        <section id="experiences">
+            <h2>Expériences Professionnelles</h2>
+            <ul>
+                <li><strong>Août 2024 - Présent :</strong> Caissier chez Proxi Super (Job étudiant)</li>
+                <li><strong>Juin 2024 - Sept. 2024 :</strong> Employé polyvalent chez Tang Frères (Job d'été)</li>
+                <li><strong>Mai 2024 - Juin 2024 :</strong> Mini-stage Assistant Technicien (Installation de chauffages électriques, pose, câblage et raccordement)</li>
+            </ul>
+            <p style="margin-top: 20px;">
+                <strong>Contact :</strong> sivangsan.geii@outlook.fr | 07 49 74 54 74 | 📍 Bobigny (Permis B)
+            </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Portfolio Sivangsan SIVARASAN - Créé pour la présentation BUT GEII</p>
+    </footer>
+
+</body>
+</html>
